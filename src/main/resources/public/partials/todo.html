@@ -1,0 +1,16 @@
+
+<span>{{remaining()}} of {{todos.length}} remaining</span>
+[ <a href="" ng-click="deleteTodos()">archive</a> ]
+<ul class="unstyled">
+
+    <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.completed">
+        <span class="done-{{todo.done}}">{{todo.description}}</span>
+    </li>
+</ul>
+<form ng-submit="addTodo()">
+    <input type="text" ng-model="todoText"  size="30"
+           placeholder="add new todo here">
+    <input class="btn-primary" type="submit" value="add">
+</form>
+
