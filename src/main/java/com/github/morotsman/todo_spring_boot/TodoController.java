@@ -17,8 +17,6 @@ public class TodoController {
 
     @Resource
     private TodoService todoService;
-    
-    private AtomicLong counter = new AtomicLong(0);
 
 
     @RequestMapping(value = "/todos", method = RequestMethod.GET)
