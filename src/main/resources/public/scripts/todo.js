@@ -28,13 +28,14 @@ angular.module('todo', ['ngRoute', 'ngResource'])
             //load todos at startup
 
             var logError = function (errorResponse) {
-                console.log("Error: " + JSON.stringify(errorResponse));
+                $scope.error = JSON.stringify(errorResponse);
             }
 
             var getTodos = function () {
                 console.log("getTodos");
                 TodoList.get({},
                         function (response) {
+                            $scope.error = 'No error';
                             $scope.todos = response;
                         },
                         logError
