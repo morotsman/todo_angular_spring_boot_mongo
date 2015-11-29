@@ -1,7 +1,6 @@
 package com.github.morotsman.todo_spring_boot;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,5 +32,5 @@ public class TodoController {
     public void delete(@PathVariable(value = "id") String id) {
         todoService.delete(id);
     }
-
-}
+    
+}    
