@@ -14,9 +14,14 @@ public class OptionalMongoConfig {
     
     //@Bean
     public MongoClientOptions createClientOptions(){
-        return new MongoClientOptions.Builder()
+        MongoClientOptions options = new MongoClientOptions.Builder()
                 //.connectTimeout(3000)
                 .build();
+        System.out.println("****************Mongo Options*********************");
+        System.out.println(options);
+        System.out.println("**************************************************");
+        
+        return options;
     }
     
 }
